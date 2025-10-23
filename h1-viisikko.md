@@ -4,18 +4,35 @@
 
 Karvinen 2025: Install Salt on Debian 13 Trixie
 
-- Salt on konfiguraationhallintatyökalu jonka asennusta käydään läpi yllä olevassa jutussa
+- Salt on konfiguraationhallintatyökalu, jonka asennusta käydään läpi yllä olevassa jutussa
 - Salt ei ole saatavilla Debian standard -"arkistossa" (repository) joten tarvitaan uusi apt-paketin arkisto.
 - Tekstissä puhuttiin myös julkisesta PGP avaimesta. Tästä olen kuullut ja lukenut aikaisemmalla tietoturvakurssilla. 
 
 
 Karvinen 2023: Run Salt Command Locally
 
+- Salt-komentoja voi suorittaa paikallisesti. Tulokset tulevat heti nähtäville.
+- Tämä helpottaa harjoittelua ja testausta.
+- Tärkeimmät toiminnot ovat pkg, file, service, user ja cmd.
+- Saltia käytetäään yleensä suuren määrän orjatietokoneiden hallintaan
+- Mikä "foo" on?
+
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
+
+- Saltilla pystyy hallitsemaan tuhansia tietokoneita. Orjien vativat olla palomuurin takana tai jopa tuntemattomassa osoitteessa.
+- Jokaisessa verkossa on yksi isäntä ja jokaisella orjalla pitää olla eri ID.
+- Isäntä antaa komentoja ja orjat pystyvät toteuttamaan niitä. esim. *sudo salt '*' cmd.run 'whoami'*
+- Millä komennolla pystyy käskyttämääna vain yhtä orjaa ja millä komenolla kaikkia?
 
 
 Karvinen 2006: Raportin kirjoittaminen
 
+- Raportin pitää olla täsmällinen ja sitä pitää kirjoittaa samalla kun teet Linux-ympäristössä töitä.
+- Raportti pitää olla toistettavissa
+- Raportissa pitää kertoa kaikki onnistumiset, epäonnistumiset, mitä laitetta käytit, milloin käytit ja mitä klikkasit. Raportti kannattaa kirjoittaa menneessä aikamuodossa.
+- Jotta raporttia olisi helpompi lukea, väliotsikoita kannattaa käyttää.
+- Lähteisiin viittaaminen on tärkeää.
+- Helpottiaisko raportin lukemista tärkeimpien avainsanojen **lihavointi** tai *kursivointi*?
 
 **a) Asenna Debian 13-Trixie virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)**
 
