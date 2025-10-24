@@ -36,7 +36,7 @@ Karvinen 2006: Raportin kirjoittaminen
 
 **a) Asenna Debian 13-Trixie virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)**
 
-Asnnus sujui hyvin. Ei virheitä. Hyvät ohjeet sivulla https://terokarvinen.com/2021/install-debian-on-virtualbox/
+Asennus sujui hyvin. Ei virheitä. Hyvät ohjeet sivulla https://terokarvinen.com/2021/install-debian-on-virtualbox/
 
 
 **b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).**
