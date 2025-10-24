@@ -189,7 +189,7 @@ Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia.
 **d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee**
 
 24.10.2025 klo 13:50\
-Wikipedian mukaan metodi on idempotentti jos sen vaikutukset ovat samat riippumatta siitä, suoritetaanko se vain yhden vai useamman kerran. (Wikipedia, https://fi.wikipedia.org/wiki/Idempotenssi). Tarkoituksena olisi siis suorittaa sama tila useita kertoja ja varmistaa, että ne eivät tee muutoksia. Tämä osoittaisi sen, että tilat ovat idempotentteja.\
+Wikipedian mukaan metodi on idempotentti jos sen vaikutukset ovat samat riippumatta siitä, suoritetaanko se vain yhden vai useamman kerran. (Wikipedia, https://fi.wikipedia.org/wiki/Idempotenssi). Tarkoituksena olisi siis suorittaa sama tila useita kertoja ja varmistaa, että ne eivät tee muutoksia. Tämä osoittaisi sen, että tilat ovat idempotentteja.
 
 Ajoin saman komennon, jonka ajoin jo aikaisemminkin pkg.installed kohdassa:
 ```
