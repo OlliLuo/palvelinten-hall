@@ -19,7 +19,7 @@ Karvinen 2023: Run Salt Command Locally
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
 
-- Saltilla pystyy hallitsemaan tuhansia tietokoneita. Orjien vativat olla palomuurin takana tai jopa tuntemattomassa osoitteessa.
+- Saltilla pystyy hallitsemaan tuhansia tietokoneita. Orjien voivat olla palomuurin takana tai jopa tuntemattomassa osoitteessa.
 - Jokaisessa verkossa on yksi isäntä ja jokaisella orjalla pitää olla eri ID.
 - Isäntä antaa komentoja ja orjat pystyvät toteuttamaan niitä. esim. sudo salt '*' cmd.run 'whoami'
 - Millä komennolla pystyy käskyttämääna vain yhtä orjaa ja millä komenolla kaikkia?
