@@ -168,7 +168,7 @@ Succeeded: 1 (changed=1)\
 Failed: 0\
 Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia, koska käyttäjää ei ollut alunperin olemassa. 
 
-**cmd.run**\
+**cmd.run**
 
 Viimeisenä vuorossa oli cmd-tilafunktio. 
 Cmd tilafunktio hallinnoi suoritettuja komentoja. Tämä tila voi määrätä komennon suoritettavaksi tietyissä olosuhteissa. (Salt project, https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html). 
