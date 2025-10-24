@@ -179,7 +179,7 @@ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/t
 ID: touch /tmp/foo <-- komento joka suoritetaan, jos ehdot täyttyvät\
 Comment: command "touch /tmp/foo" run <--komento suoritettiin\
 PID: 5783 <-- id joka annettiin kyseiselle prosessille. (Process ID)\
-retcode: 0 <-- "Return code", jos prosessi on onnistunut, tähän tulee nolla. Kaikki muut numerot tarkoittavat että prosessi on epäonnistunut (Packet Coders, https://www.packetcoders.io/network-automation-and-the-linux-return-code/)\
+retcode: 0 <-- "Return code", jos prosessi on onnistunut, tähän tulee nolla. Kaikki muut numerot tarkoittavat että prosessi on epäonnistunut (Packet Coders, https://www.packetcoders.io/network-automation-and-the-linux-return-code/) \
 Succeeded: 1 (changed=1)\
 Failed: 0\
 Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia. 
