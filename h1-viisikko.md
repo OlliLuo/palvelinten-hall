@@ -112,19 +112,19 @@ Aloitetaan pkg-funktion testaamisella
 ```
 $ sudo salt-call --local -l info state.single pkg.installed tree
 ```
-Selitykset tulostetuille termeille:
-ID: tree <-- Tämä on ohjelma joka asennettiin
-Function: pkg.installed <-- Funkitio jota suoritettiin
-Result: True <-- Mikä oli lopputulos. Tässä tapauksessa "True" eli ohjelman asennus onnistui.
-Comment: The following packages were installed/updated: tree <-- Tässä on vielä kommenttina mitä tapahtui. 
-Started: 09:27:12.479924 <-- Koska asennus alkoi
-Duration: 11138.191 ms <-- kauanka asennus kesti
-Changes: tree: new: 2.2.1-1 <-- Muutokset mitä asennuksessa tapahtui. Tässä tapauksessa asennettiin tree versio 2.2.1-1.
-Summary for local
-Succeeded: 1 (changed=1)
-Failed: 0
+Selitykset tulostetuille termeille:\
+ID: tree <-- Tämä on ohjelma joka asennettiin\
+Function: pkg.installed <-- Funkitio jota suoritettiin\
+Result: True <-- Mikä oli lopputulos. Tässä tapauksessa "True" eli ohjelman asennus onnistui.\
+Comment: The following packages were installed/updated: tree <-- Tässä on vielä kommenttina mitä tapahtui. \
+Started: 09:27:12.479924 <-- Koska asennus alkoi\
+Duration: 11138.191 ms <-- kauanka asennus kesti\
+Changes: tree: new: 2.2.1-1 <-- Muutokset mitä asennuksessa tapahtui. Tässä tapauksessa asennettiin tree versio 2.2.1-1.\
+Summary for local\
+Succeeded: 1 (changed=1)\
+Failed: 0\
 Tässä kohtaa kysyin ai:lta mitä tuo ylläoleva tarkoittaa: Installing pkg in salt minion. What does 
-"Succeeded: 1 (changed=1) Failed: 0" mean? 
+"Succeeded: 1 (changed=1) Failed: 0" mean? \
 Succeeded: 1 kertoo että yksi tilantarkastus on onnistunut. 
 Changed=1 kertoo että ”Succeeded”-tiloista yksi johti muutokseen minionin järjestelmässä. Pakettia ei oltu vielä asennettu minioniin. Salt latasi ja asensi paketin onnistuneesti, jolloin järjestelmän tila muuttui ”not installed” -tilasta ”installed”-tilaan.
 Failed=0 kertoo että 0 tilaa epäonnistui. 
@@ -149,7 +149,7 @@ Seuraavaksi testasin service-tilafunktiota. Tätä tilafunktiota käytetään us
 sudo salt-call --local -l info state.single service.running ufw enable=True
 ```
 Tällä komennolla palomuurin pitäisi mennä päälle. 
-Tuloksissa minulle pisti silmään:
+Tuloksissa minulle pisti silmään:\
 "Comment: The service is already running". Olinkin jo Debianin asennusvaiheessa laittanut palomuurin päälle joten tämä ei tehnytkään mitään eli ei tullut muutoksia. 
 
 **user.present**
@@ -157,15 +157,15 @@ Seuraavaksi oli vuorossa user-tilafunktio. User tilafunktion tehtävänä on luo
 ```
 sudo salt-call --local -l info state.single user.present seppo
 ```
-Comment: New user seppo created <-- kyseistä käyttäjää ei ollut olemassa joten uusi käyttäjä "seppo" luotiin. 
-Gid: 1001 <-- kertoo ryhmän id tunnuksen.
-Groups: seppo <-- ryhmä johon käyttäjä "seppo" luotiin. 
-Home: /home/seppo <-- kyseisen käyttäjän polku
-Name: Seppo <-- käyttäjän nimi
-Shell: /bin/sh <-- Kirjautumis-shell, oletusarvoisesti järjestelmän oletus-shell
-uid: 1001 <-- käyttäjän id
-Succeeded: 1 (changed=1)
-Failed: 0
+Comment: New user seppo created <-- kyseistä käyttäjää ei ollut olemassa joten uusi käyttäjä "seppo" luotiin. \
+Gid: 1001 <-- kertoo ryhmän id tunnuksen.\
+Groups: seppo <-- ryhmä johon käyttäjä "seppo" luotiin. \
+Home: /home/seppo <-- kyseisen käyttäjän polku\
+Name: Seppo <-- käyttäjän nimi\
+Shell: /bin/sh <-- Kirjautumis-shell, oletusarvoisesti järjestelmän oletus-shell\
+uid: 1001 <-- käyttäjän id\
+Succeeded: 1 (changed=1)\
+Failed: 0\
 Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia, koska käyttäjää ei ollut alunperin olemassa. 
 
 **cmd.run**
@@ -176,12 +176,12 @@ Päätin kokeilla seuraavaa komentoa:
 ```
 sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
 ```
-ID: touch /tmp/foo <-- komento joka suoritetaan, jos ehdot täyttyvät
-Comment: command "touch /tmp/foo" run <--komento suoritettiin
-PID: 5783 <-- id joka annettiin kyseiselle prosessille. (Process ID)
-retcode: 0 <-- "Return code", jos prosessi on onnistunut, tähän tulee nolla. Kaikki muut numerot tarkoittavat että prosessi on epäonnistunut (Packet Coders, https://www.packetcoders.io/network-automation-and-the-linux-return-code/)
-Succeeded: 1 (changed=1)
-Failed: 0
+ID: touch /tmp/foo <-- komento joka suoritetaan, jos ehdot täyttyvät\
+Comment: command "touch /tmp/foo" run <--komento suoritettiin\
+PID: 5783 <-- id joka annettiin kyseiselle prosessille. (Process ID)\
+retcode: 0 <-- "Return code", jos prosessi on onnistunut, tähän tulee nolla. Kaikki muut numerot tarkoittavat että prosessi on epäonnistunut (Packet Coders, https://www.packetcoders.io/network-automation-and-the-linux-return-code/)\
+Succeeded: 1 (changed=1)\
+Failed: 0\
 Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia. 
 
 
