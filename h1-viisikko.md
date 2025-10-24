@@ -107,7 +107,7 @@ Ensin tarkistin alla olevalla komennolla, että minulla edelleen oli salt asenne
 ```
 sudo salt-call --version
 ```
-**pkg.installed**
+*** pkg.installed ***
 Aloitetaan pkg-funktion testaamisella
 ```
 $ sudo salt-call --local -l info state.single pkg.installed tree
@@ -129,7 +129,7 @@ Succeeded: 1 kertoo että yksi tilantarkastus on onnistunut.
 Changed=1 kertoo että ”Succeeded”-tiloista yksi johti muutokseen minionin järjestelmässä. Pakettia ei oltu vielä asennettu minioniin. Salt latasi ja asensi paketin onnistuneesti, jolloin järjestelmän tila muuttui ”not installed” -tilasta ”installed”-tilaan.
 Failed=0 kertoo että 0 tilaa epäonnistui. 
 
-**file.managed**
+*** file.managed ***
 Seuraavaksi vuorossa on tilafunktio file.
 Ajoin komennon
 ```
@@ -143,7 +143,7 @@ cat ollil
 ```
 *Tässä testailen file tilafunktiota. Onnistuukohan?* tulostui joten homma toimi. 
 
-**service.running**
+*** service.running ***
 Seuraavaksi testasin service-tilafunktiota. Tätä tilafunktiota käytetään usein daemonin automaattiseen uudelleenkäynnistykseen silloin kun asetuksia muutetaan. Ajoin komennon:
 ```
 sudo salt-call --local -l info state.single service.running ufw enable=True
@@ -152,7 +152,7 @@ Tällä komennolla palomuurin pitäisi mennä päälle.
 Tuloksissa minulle pisti silmään:\
 "Comment: The service is already running". Olinkin jo Debianin asennusvaiheessa laittanut palomuurin päälle joten tämä ei tehnytkään mitään eli ei tullut muutoksia. 
 
-**user.present**
+*** user.present ***
 Seuraavaksi oli vuorossa user-tilafunktio. User tilafunktion tehtävänä on luoda ja hallita käyttäjiä ja niiden asetuksia. (Salt project, https://docs.saltproject.io/en/3006/ref/states/all/salt.states.user.html). Ajoin komennon:
 ```
 sudo salt-call --local -l info state.single user.present seppo
@@ -168,7 +168,7 @@ Succeeded: 1 (changed=1)\
 Failed: 0\
 Yksi tilantarkastus onnistui ja yhteen tehtiin muutoksia, koska käyttäjää ei ollut alunperin olemassa. 
 
-**cmd.run**
+*** cmd.run ***
 
 Viimeisenä vuorossa oli cmd-tilafunktio. 
 Cmd tilafunktio hallinnoi suoritettuja komentoja. Tämä tila voi määrätä komennon suoritettavaksi tietyissä olosuhteissa. (Salt project, https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html). 
