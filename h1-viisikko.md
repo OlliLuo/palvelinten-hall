@@ -114,7 +114,7 @@ $ sudo salt-call --local -l info state.single pkg.installed tree
 ```
 Selitykset tulostetuille termeille:\
 ID: tree <-- Tämä on ohjelma joka asennettiin\
-Function: pkg.installed <-- Funkitio jota suoritettiin\
+Function: pkg.installed <-- Funktio jota suoritettiin\
 Result: True <-- Mikä oli lopputulos. Tässä tapauksessa "True" eli ohjelman asennus onnistui.\
 Comment: The following packages were installed/updated: tree <-- Tässä on vielä kommenttina mitä tapahtui. \
 Started: 09:27:12.479924 <-- Koska asennus alkoi\
