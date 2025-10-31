@@ -148,7 +148,7 @@ Loin komennolla sudoedit init.sls tiedoston ja kirjoitin sinne:
 katri:
   user.present
 ```
-Tähän olisi voinut antaa muitakin tietoja esim kokonimi, salasana ja työpuhelin mutta jätin nämä tällä kertaa tyhjäksi.\
+Tähän olisi voinut antaa muitakin tietoja esim kokonimi, salasana ja työpuhelin mutta jätin nämä tällä kertaa tyhjäksi.
 
 Ajoin komennon
 ```
