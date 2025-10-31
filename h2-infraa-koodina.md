@@ -199,7 +199,7 @@ Comment: New user simo  created\
 Succeeded: 2 (changed: 2)\
 Testasin vielä että init.sls on indempotentti ajamalla komennon sudo salt-call --local state.apply hellopkg-user
 uudestaan. \
-Tuloksena oli Succeeded: 2. Tällä kertaa chaged ei ollut yhtään eli init.sls on indempotentti. Muutoksia ei tehty. 
+Tuloksena oli Succeeded: 2. Tällä kertaa changed ei ollut yhtään eli init.sls on indempotentti. Muutoksia ei tehty. 
 
 
 ### Lähteet
