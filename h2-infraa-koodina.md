@@ -176,12 +176,12 @@ Komento suoritettiin koska /tmp/foo ei ollut olemassa. Succeeded: 1 (changed=1).
 
 
 **d) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näistä: package, file, service, user. Tarkista eri ohjelmalla, että lopputulos on oikea. Osoita useammalla ajolla, että sls-tiedostosi on idempotentti.** \
-Käytän tilafunktioita package ja user. Loin tiedoston ja siirryin sinne:
+Käytän tilafunktioita package ja user. Loin kansion ja siirryin sinne:
 ```
 sudo mkdir -p /srv/salt/hellopkg-user
 cd /srv/salt/hellopkg-user/
 ```
-Tein komennolla sudoedit init.sls tiedoston ja muokkasin sitö
+Tein komennolla sudoedit init.sls tiedoston ja muokkasin sitä
 ```
 apache2:
   pkg.installed
