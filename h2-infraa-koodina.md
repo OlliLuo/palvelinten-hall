@@ -24,7 +24,7 @@ Salt contributors: The top file (https://docs.saltproject.io/en/latest/ref/state
 
 **a) Hei infrakoodi! Kokeile paikallisesti (esim 'sudo salt-call --local') infraa koodina. Kirjota sls-tiedosto, joka tekee esimerkkitiedoston /tmp/ -kansioon.**
 
-Aloitin tämän harjoituksen tekemisen 31.10.2025 klo 11:46. omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta **Hello Salt Infra-as-Code
+Tein harjoitukset a-d 31.10.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta **Hello Salt Infra-as-Code
 ** (https://terokarvinen.com/2024/hello-salt-infra-as-code/)./
 
 Aloitin tarkistamalla että salt on asennettuna komennolla
