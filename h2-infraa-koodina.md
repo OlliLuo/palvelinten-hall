@@ -171,7 +171,7 @@ Seuraavaksi ajoin komennon
 ```
 sudo salt-call --local state.apply hellocmd
 ```
-![cmd funktio](cmd.png)
+![cmd funktio](cmd.png) \
 Komento suoritettiin koska /tmp/foo ei ollut olemassa. Succeeded: 1 (changed=1). 
 
 
@@ -209,4 +209,4 @@ https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules
 https://docs.saltproject.io/en/latest/ref/states/top.html \
 https://docs.saltproject.io/en/3006/ref/states/all/salt.states.user.html \
 https://docs.saltproject.io/en/3007/ref/states/all/salt.states.service.html \
-https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html \
+https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html 
