@@ -110,7 +110,7 @@ Testasin vielä mikä versio httpiestä minnulla oli:
 ```
 http --version
 ```
-Vastaukseksi tuli **3.2.4**\
+Vastaukseksi tuli **3.2.4**
 
 
 Seuraavaksi vuorossa oli tilafunktio file. Olinkin tämän tehnyt jo aiemmin niin ajoin uudestaan komennon:
