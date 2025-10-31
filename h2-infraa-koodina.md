@@ -135,7 +135,7 @@ Ajoin komennon:
 ```
 sudo salt-call --local state.apply helloservice
 ```
-Tämä onnistui. Koska palomuuri oli jo päällä, kommentiksi tuli "The service ufw is already running" Succeeded: 1\
+Tämä onnistui. Koska palomuuri oli jo päällä, kommentiksi tuli "The service ufw is already running" Succeeded: 1
 
 Seuraavaksi oli vuorossa user-tilafunktio.\
 Loin kansion ja menin sinne:
