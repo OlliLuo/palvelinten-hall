@@ -175,8 +175,8 @@ sudo salt-call --local state.apply hellocmd
 Komento suoritettiin koska /tmp/foo ei ollut olemassa. Succeeded: 1 (changed=1). 
 
 
-**d) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näistä: package, file, service, user. Tarkista eri ohjelmalla, että lopputulos on oikea. Osoita useammalla ajolla, että sls-tiedostosi on idempotentti.**
-Käytän tilafunktioita package jauser. Loin tiedoston ja siirryin sinne:
+**d) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näistä: package, file, service, user. Tarkista eri ohjelmalla, että lopputulos on oikea. Osoita useammalla ajolla, että sls-tiedostosi on idempotentti.** \
+Käytän tilafunktioita package ja user. Loin tiedoston ja siirryin sinne:
 ```
 sudo mkdir -p /srv/salt/hellopkg-user
 cd /srv/salt/hellopkg-user/
