@@ -78,7 +78,7 @@ Seuraavaksi suoritin komennon
 ```
 sudo salt-call --local state.apply
 ```
-
+![top-file](top-file.png)
 Kaikki sujui niinkuin pitikin. 
 
 **c) Viisikko tiedostossa. Tee erilliset esimerkit kustakin viidestä tärkeimmästä tilafunktiosta pkg, file, service, user, cmd. Kirjoita esimerkit omiksi tiloikseen /srv/salt/ alle, esim /srv/salt/hellopkg/init.sls.**
@@ -171,6 +171,7 @@ Seuraavaksi ajoin komennon
 ```
 sudo salt-call --local state.apply hellocmd
 ```
+![cmd funktio](cmd.png)
 Komento suoritettiin koska /tmp/foo ei ollut olemassa. Succeeded: 1 (changed=1). 
 
 
