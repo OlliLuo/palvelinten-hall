@@ -200,11 +200,11 @@ uudestaan. \
 Tuloksena oli Succeeded: 2. Tällä kertaa chaged ei ollut yhtään eli init.sls on indempotentti. Muutoksia ei tehty. 
 
 
-###Lähteet###
+### Lähteet
 
-https://terokarvinen.com/2024/hello-salt-infra-as-code/
-https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml
-https://docs.saltproject.io/en/latest/ref/states/top.html
-https://docs.saltproject.io/en/3006/ref/states/all/salt.states.user.html
-https://docs.saltproject.io/en/3007/ref/states/all/salt.states.service.html
-https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html
+https://terokarvinen.com/2024/hello-salt-infra-as-code/ \
+https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml \
+https://docs.saltproject.io/en/latest/ref/states/top.html \
+https://docs.saltproject.io/en/3006/ref/states/all/salt.states.user.html \
+https://docs.saltproject.io/en/3007/ref/states/all/salt.states.service.html \
+https://docs.saltproject.io/en/3007/ref/states/all/salt.states.cmd.html \
