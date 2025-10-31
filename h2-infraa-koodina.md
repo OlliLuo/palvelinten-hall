@@ -55,6 +55,7 @@ Tämän jälkeen painoin ctrl + X ja tallensin painamalla Y-näppäintä. Tämä
 ```
 sudo salt-call --local state.apply hello
 ```
+![tmp-hello](tmp-hello.pmg)
 Uusi tiedosto **hello-olli** luotiin kohteeseen /tmp. Succeeded: 1 ja changed=1. Yksi tila onnistui ja yhteen tehtiin muutoksia. 
 
 
