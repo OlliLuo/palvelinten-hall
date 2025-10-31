@@ -5,7 +5,7 @@
 Karvinen 2014: Hello Salt Infra-as-Code (https://terokarvinen.com/2024/hello-salt-infra-as-code/) 
 
 - Tässä ohjeessa luodaan Salt-konfiguraatiojärejstelmän "Hello World" -ohjelma
-- init.sls on tärkeä luoda jos haluaa tehdä YAML on Salt-tiedostojen oletusrenderöijä, joka muuntaa YAML-datasta Python-datastruktuureja koodina
+- init.sls on tärkeä luoda
 - pkg, file, service, user ja cmd ovat muita tilafunktioita joita voi myös hyödyntää
 
 Salt contributors: Salt overview (https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml)
