@@ -19,7 +19,8 @@ x) Lue ja tiivistä.
 
 **a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)**
 
-
+Tein harjoitukset a-e 6.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant \
+Aloitin lataamalla Vagrantin Windowsille sivulta https://developer.hashicorp.com/vagrant/install.
 
 
 ### Lähteet:
