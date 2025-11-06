@@ -21,13 +21,33 @@ x) Lue ja tiivistä.
 
 Tein harjoitukset a-e 6.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant \
 Aloitin lataamalla Vagrantin Windowsille sivulta https://developer.hashicorp.com/vagrant/install. \
-Asennus oli helppoa. Piti painaa pari kertaa next ja käynnistää kone uudelleen. Tämän jälkeen avasin Command Promptin ja annoin komennon 
+Asennus oli helppoa. Piti painaa pari kertaa next ja käynnistää kone uudelleen. Tämän jälkeen avasin Command Promptin ja annoin komennon joka kertoi minulle Vagrantin version.
 ```
 vagrant --version
 ```
-![vagrant version](vagrant version.png)
+![vagrant version](vagrant-version.png)
 
+**b) Linux Vagrant. Tee Vagrantilla uusi Linux-virtuaalikone.**
+Aloitin luomalla uuden kansion twohost ja siirryin sinne.
+```
+mkdir twohost
+cd twohost
+```
+Seuraavaksi loin sinne vagran tiedoston komennolla
+```
+vagran init
+```
+![vagrant init](vagrant-init.png)
 
+Tämän jälkeen avasin tiedoston notepadilla ja copy-pastesin Tero Karvisen oheesta Two Machine Virtual Network With Debian 11 Bullseye and Vagrant kohdan **Ready made Vagrantfile for three computers** Korvasin kohdan "debian/bullseye64" --> debian/bookworm64.
+![vagrant file](vagrant-file.png)
+
+Seuraavaksi ajoin komennon
+```
+vagrant up
+```
+Asennus lähti käyntiin ja siinä kesti noin 5 minuuttia. Alla näkyy lopputulos
+![vagrant lopputulos](lopputulos-vagrant.png)
 
 ### Lähteet:
 
