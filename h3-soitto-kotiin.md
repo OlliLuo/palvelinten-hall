@@ -67,9 +67,17 @@ Tämän jälkeen pingasin t002 konetta komennolla
 ```
 vagrant@t001$ ping -c 1 192.168.88.102
 ```
-Pingaus onnistui!
+Pingaus onnistui! \
 ![vagrant ping](vagrant-t001-ping.png)
-
+Tämän jälkeen testasin vielä toisinpäin pingata t002 --> t001.
+Syötin komennot
+```
+exit
+vagrant ssh t002
+ping -c 1 192.168.88.101
+```
+Tämäkin onnistui! \
+![vagrant ping2](vagrant-t002-ping.png)
 
 ### Lähteet:
 
