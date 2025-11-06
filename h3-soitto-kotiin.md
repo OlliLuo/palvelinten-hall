@@ -105,7 +105,7 @@ Tässä meni hetki. Lopulta asennus oli valmis ja tarkistin saltin version
 ```
 salt --version
 ```
-![salt master version](salt-master.png) \
+![salt master version](salt-version.png) \
 Otin tässä vaiheessa myös talteen masterin ip osoitteen jonka lisään minionin /etc/salt/minion kansioon. Osoite oli 192.168.88.101.
 
 Tämän jälkeen tein samat työvaiheet t002 koneelle. Kun salt oli asennettu niin laitoin masterin osoitteen 192.168.88.101 tiedostoon /etc/salt/minion komennolla
