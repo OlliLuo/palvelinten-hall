@@ -49,6 +49,28 @@ vagrant up
 Asennus lähti käyntiin ja siinä kesti noin 5 minuuttia. Alla näkyy lopputulos
 ![vagrant lopputulos](lopputulos-vagrant.png)
 
+Tarkistin vielä koneiden hostnamet komennolla
+```
+vagrant status
+```
+![vagrant status](vagrant-status.png)
+
+
+**c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan.**
+
+Tässä osiossa testailen pingata kahta konetta jotka loin edellisessä osiossa. \
+Otin ssh yhteyden t001 hostiin komennolla
+```
+vagrant ssh t001
+```
+Tämän jälkeen pingasin t002 konetta komennolla
+```
+vagrant@t001$ ping -c 1 192.168.88.102
+```
+Pingaus onnistui!
+![vagrant ping](vagrant-t001-ping.png)
+
+
 ### Lähteet:
 
 Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/) \
