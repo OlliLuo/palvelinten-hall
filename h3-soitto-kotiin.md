@@ -68,7 +68,7 @@ Tämän jälkeen pingasin t002 konetta komennolla
 vagrant@t001$ ping -c 1 192.168.88.102
 ```
 Pingaus onnistui! \
-![vagrant ping](vagrant-t001-ping.png)
+![vagrant ping](vagrant-t001-ping.png) \
 Tämän jälkeen testasin vielä toisinpäin pingata t002 --> t001.
 Syötin komennot
 ```
@@ -78,6 +78,62 @@ ping -c 1 192.168.88.101
 ```
 Tämäkin onnistui! \
 ![vagrant ping2](vagrant-t002-ping.png)
+
+
+**d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.**
+
+Aloitin lataamalla saltin molemmille koneille t001 ja t002 Tero Karvisen ohjeella Install Salt on Debian 13 Trixie
+Aloitin luomalla kansion saltrepo
+```
+mkdir saltrepo/
+cd saltrepo/
+```
+sitten wgetillä kaksi tiedostoa
+```
+wget https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public
+wget https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources
+```
+Sitten salt masterin asennusta:
+```
+sudo cp public /etc/apt/keyrings/salt-archive-keyring.pgp
+sudo cp salt.sources /etc/apt/sources.list.d/
+
+sudo apt-get update
+sudo apt-get install salt-minion salt-master
+```
+Tässä meni hetki. Lopulta asennus oli valmis ja tarkistin saltin version
+```
+salt --version
+```
+![salt master version](salt-master.png) \
+Otin tässä vaiheessa myös talteen masterin ip osoitteen jonka lisään minionin /etc/salt/minion kansioon. Osoite oli 192.168.88.101.
+
+Tämän jälkeen tein samat työvaiheet t002 koneelle. Kun salt oli asennettu niin laitoin masterin osoitteen 192.168.88.101 tiedostoon /etc/salt/minion komennolla
+```
+sudoedit /etc/salt/minion
+```
+Tämän jälkeen käynnistin salt-minionin uudestaan komennolla
+```
+sudo systemctl restart salt-minion.service
+```
+Sitten exit ja otin ssh yhteyden masteriin t001. Ajoin komennon
+```
+sudo salt-key
+```
+Tällä näkyi avaimet ja siellähän näkyi t002
+![salt masterkeys](master-keys.png) \
+
+Hyväksyin avaimet komennolla
+```
+sudo salt-key -A
+```
+Testasin minionia komennoilla
+```
+sudo salt '*' test.ping
+sudo salt '*' cmd.run 'whoami'
+```
+![minion-test](minion-test.png) \
+
 
 ### Lähteet:
 
