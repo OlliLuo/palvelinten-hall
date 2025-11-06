@@ -25,7 +25,7 @@ Asennus oli helppoa. Piti painaa pari kertaa next ja käynnistää kone uudellee
 ```
 vagrant --version
 ```
-
+![vagrant version](vagrant version.png)
 
 
 
