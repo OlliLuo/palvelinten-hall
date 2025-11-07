@@ -19,7 +19,7 @@ x) Lue ja tiivistä.
 
 **a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)**
 
-Tein harjoitukset a-e 6.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant \
+Tein harjoitukset a-d 6.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant \
 Aloitin lataamalla Vagrantin Windowsille sivulta https://developer.hashicorp.com/vagrant/install. \
 Asennus oli helppoa. Piti painaa pari kertaa next ja käynnistää kone uudelleen. Tämän jälkeen avasin Command Promptin ja annoin komennon joka kertoi minulle Vagrantin version.
 ```
@@ -133,6 +133,21 @@ sudo salt '*' test.ping
 sudo salt '*' cmd.run 'whoami'
 ```
 ![minion-test](minion-test.png) \
+
+**e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)**
+
+Tein harjoituksen e 7.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 4 kannettava tietokone. Käytin apunani Tero Karvisen ohjetta Salt Vagrant - automatically provision one master and two slaves. Aloitin käynnistämällä vagrant ympäristön komennolla vagrant up. Tämä ei suoraan toiminut vaan jouduin hakemaan t001 ja t002 virtuaaliympäristöjen id tunnukset komennolla 
+```
+vagrant global-status
+```
+![vagrant global status](vagrant-globalstatus.png)
+
+Tämän jälkeen ajoin komennon 
+```
+vagrant up f177dca 57d2be4
+```
+jonka jälkeen koneet käynnistyivät. 
+
 
 
 ### Lähteet:
