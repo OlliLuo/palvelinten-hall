@@ -33,13 +33,13 @@ Aloitin luomalla uuden kansion twohost ja siirryin sinne.
 mkdir twohost
 cd twohost
 ```
-Seuraavaksi loin sinne vagran tiedoston komennolla
+Seuraavaksi loin sinne vagrant tiedoston komennolla
 ```
-vagran init
+vagrant init
 ```
 ![vagrant init](vagrant-init.png)
 
-Tämän jälkeen avasin tiedoston notepadilla ja copy-pastesin Tero Karvisen oheesta Two Machine Virtual Network With Debian 11 Bullseye and Vagrant kohdan **Ready made Vagrantfile for three computers** Korvasin kohdan "debian/bullseye64" --> debian/bookworm64.
+Tämän jälkeen avasin tiedoston notepadilla ja copy-pastesin Tero Karvisen oheesta Two Machine Virtual Network With Debian 11 Bullseye and Vagrant kohdan **Ready made Vagrantfile for three computers.** Korvasin kohdan "debian/bullseye64" --> debian/bookworm64.
 ![vagrant file](vagrant-file.png)
 
 Seuraavaksi ajoin komennon
@@ -65,7 +65,7 @@ vagrant ssh t001
 ```
 Tämän jälkeen pingasin t002 konetta komennolla
 ```
-vagrant@t001$ ping -c 1 192.168.88.102
+ping -c 1 192.168.88.102
 ```
 Pingaus onnistui! \
 ![vagrant ping](vagrant-t001-ping.png) \
@@ -82,7 +82,7 @@ Tämäkin onnistui! \
 
 **d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.**
 
-Aloitin lataamalla saltin molemmille koneille t001 ja t002 Tero Karvisen ohjeella Install Salt on Debian 13 Trixie
+Aloitin lataamalla saltin molemmille koneille t001 ja t002 Tero Karvisen ohjeella Install Salt on Debian 13 Trixie. \
 Aloitin luomalla kansion saltrepo
 ```
 mkdir saltrepo/
@@ -156,7 +156,7 @@ vagrant status
 ![vagrant status](vagrant-status.png) 
 
 Tämän jälkeen testasin ajaa kahta tilaa verkon yli. Valitsin tähän user ja file tilat.
-Asennetaan apache2 minionille t002. Otin ensiksi ssh yhteyden komennolla vagrant ssh t001. Tämän jälkeen ajoin komennon 
+Luodaan ensiksi uusi käyttäjä. Otin ensiksi ssh yhteyden komennolla vagrant ssh t001. Tämän jälkeen ajoin komennon 
 ```
 sudo salt '*' state.single user.present testi
 ```
@@ -169,7 +169,7 @@ sudo salt '*' state.single file.managed '/tmp/tämä-on-testi
 ```
 Tämäkin toimi!
 ![file managed](file-managed.png) \
-Menin vielä tarkistamaan että kyseinen tiedosto oli luoto. Ssh yhteys t002 koneeseen ja sieltähän se löytyi.
+Menin vielä tarkistamaan että kyseinen tiedosto oli luotu. Ssh yhteys t002 koneeseen ja sieltähän se löytyi.
 
 ![testi kansio](testi-kansio.png) 
 
