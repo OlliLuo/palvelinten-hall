@@ -140,7 +140,7 @@ Tein harjoituksen e 7.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 
 ```
 vagrant global-status
 ```
-![vagrant global status](vagrant-globalstatus.png)
+![vagrant global status](vagrant-globalstatus.png) \
 
 Tämän jälkeen ajoin komennon 
 ```
@@ -148,6 +148,30 @@ vagrant up f177dca 57d2be4
 ```
 jonka jälkeen koneet käynnistyivät. 
 
+Testasin vielä että koneet ovat todellakin käynnissä.
+```
+cd twohost
+vagrant status
+```
+![vagrant status](vagrant-status.png) \
+
+Tämän jälkeen testasin ajaa kahta tilaa verkon yli. Valitsin tähän user ja file tilat.
+Asennetaan apache2 minionille t002. Otin ensiksi ssh yhteyden komennolla vagrant ssh t001. Tämän jälkeen ajoin komennon 
+```
+sudo salt '*' state.single user.present testi
+```
+Tämä onnistui
+![user present](user.png) \
+
+Seuraavaksi testasin file.managed tilaa ja ajoin komennon
+```
+sudo salt '*' state.single file.managed '/tmp/tämä-on-testi
+```
+Tämäkin toimi!
+![file managed](file-managed.png) \
+Menin vielä tarkistamaan että kyseinen tiedosto oli luoto. Ssh yhteys t002 koneeseen ja sieltähän se löytyi.
+
+![testi kansio](testi-kansio.png) \
 
 
 ### Lähteet:
