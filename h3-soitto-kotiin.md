@@ -6,7 +6,7 @@ x) Lue ja tiivistä.
 - Tämän ohjeen avulla voit perustaa kahden laitteen virtuaaliverkon
 - Vanhentunutta 11-bullseye:ta ei enää käytetä
 - Vagrantin asennus onnistuu Debianille, ubuntulle, Macille ja Windowsille
-- Virtuaalikoneideon "tuhoaminen" onnistuu helposti yhdellä komennolla
+- Virtuaalikoneiden "tuhoaminen" onnistuu helposti yhdellä komennolla
 
 **Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux)**
 - Saltin avulla pystyy komentamaan tuhansia tietokoneita
