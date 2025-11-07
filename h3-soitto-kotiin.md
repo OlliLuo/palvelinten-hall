@@ -120,8 +120,8 @@ Sitten exit ja otin ssh yhteyden masteriin t001. Ajoin komennon
 ```
 sudo salt-key
 ```
-Tällä näkyi avaimet ja siellähän näkyi t002
-![salt masterkeys](master-keys.png) \
+Tällä näkyi avaimet ja siellähän näkyi t002 \
+![salt masterkeys](master-keys.png) 
 
 Hyväksyin avaimet komennolla
 ```
@@ -132,7 +132,7 @@ Testasin minionia komennoilla
 sudo salt '*' test.ping
 sudo salt '*' cmd.run 'whoami'
 ```
-![minion-test](minion-test.png) \
+![minion-test](minion-test.png) 
 
 **e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)**
 
@@ -140,7 +140,7 @@ Tein harjoituksen e 7.11.2025 omassa kodissani. Koneenani toimi Lenovon V14 Gen 
 ```
 vagrant global-status
 ```
-![vagrant global status](vagrant-globalstatus.png) \
+![vagrant global status](vagrant-globalstatus.png) 
 
 Tämän jälkeen ajoin komennon 
 ```
@@ -153,15 +153,15 @@ Testasin vielä että koneet ovat todellakin käynnissä.
 cd twohost
 vagrant status
 ```
-![vagrant status](vagrant-status.png) \
+![vagrant status](vagrant-status.png) 
 
 Tämän jälkeen testasin ajaa kahta tilaa verkon yli. Valitsin tähän user ja file tilat.
 Asennetaan apache2 minionille t002. Otin ensiksi ssh yhteyden komennolla vagrant ssh t001. Tämän jälkeen ajoin komennon 
 ```
 sudo salt '*' state.single user.present testi
 ```
-Tämä onnistui
-![user present](user.png) \
+Tämä onnistui \
+![user present](user.png) 
 
 Seuraavaksi testasin file.managed tilaa ja ajoin komennon
 ```
@@ -171,7 +171,7 @@ Tämäkin toimi!
 ![file managed](file-managed.png) \
 Menin vielä tarkistamaan että kyseinen tiedosto oli luoto. Ssh yhteys t002 koneeseen ja sieltähän se löytyi.
 
-![testi kansio](testi-kansio.png) \
+![testi kansio](testi-kansio.png) 
 
 
 ### Lähteet:
@@ -179,3 +179,6 @@ Menin vielä tarkistamaan että kyseinen tiedosto oli luoto. Ssh yhteys t002 kon
 Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/) \
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux) \
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves (https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file)
+Karvinen 2025: Install Salt on Debian 13 Trixie (https://terokarvinen.com/install-salt-on-debian-13-trixie/)
+Install Vagrant https://developer.hashicorp.com/vagrant/install
+
