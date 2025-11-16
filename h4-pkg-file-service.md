@@ -58,10 +58,11 @@ Tämän jälkeen siirryin polkuun /srv/salt/init.sls ja loin/aloin muokkaamaan t
 ```
 sudoedit init.sls
 ```
-Ensiksi asensin openssh-serverin. Tiedostoon tuli tekstiksi: \
-openssh-server: \
- pkg.installed \
-
+Ensiksi asensin openssh-serverin. Tiedostoon tuli tekstiksi: 
+```
+openssh-server: 
+  pkg.installed 
+```
  Ajoin tämän jälkeen komennon
 ```
 sudo salt '*' state.apply ssh-testi
@@ -70,10 +71,12 @@ sudo salt '*' state.apply ssh-testi
 
 
 Tämä onnistui. Succeeded: 1. Ei tullut changed koska ssh oli jo asennettuna minionille. \
-Tämän jälkeen init.sls teidostoon seuraava teksti edellisen perään: \
-/etc/ssh/sshd_config: \
-  file.managed:\
-    - source: salt://sshd_config\
+Tämän jälkeen tein init.sls tiedostoon seuraavan tekstin edellisen perään: 
+```
+/etc/ssh/sshd_config: 
+  file.managed:
+    - source: salt://sshd_config
+```
 Tämän jälkeen kopioin sshd_configure konfiguraatiotiedoston masteriin joka toimii ns. lähteenä. 
 ```
 sudo cp sshd_config /srv/salt
@@ -82,16 +85,17 @@ Muutin tiedostosta Portin 22 saataville ja lisäsin Portin 1234. Sitten ajoin
 ```
 sudo salt '*' state.apply ssh-testi
 ```
-![sshd-file](sshd-file.png)
+![sshd-file](sshd-file.png) \
 Tämä onnistui! Succeeded 2 ja Changed: 1 eli tiedostoa oli muutettu. Kävin katsomaasa minionilla /etc/ssh/sshd_config tiedostoa ja sinne oli tosiaan tullut Port 22 ja Port 1234 auki. 
 ![vagrant-portit-auki](vagrant-portit-auki.png)
 
-Viimeiseksi muokkasin init.sls tiedostoon kaiken perään\
-sshd: \
- service.running: \
-   - watch: \
-     - file: /etc/ssh/sshd_config \
-
+Viimeiseksi muokkasin init.sls tiedostoon kaiken perään
+```
+sshd: 
+  service.running: 
+   - watch: 
+      - file: /etc/ssh/sshd_config 
+```
 Jos sshd_config tiedostoon tehdään muutoksia niin sshd käynnistyy uudestaan. Tämän jälkeen ajoin komennon.
 ```
 sudo salt '*' state.apply ssh-testi
@@ -103,7 +107,7 @@ Korjataan tämä poistamalla masterin /srv/salt/sshd_config tiedostosta Port 123
 ```
 sudo salt '*' state.apply ssh-testi
 ```
-![service-restarted](service-restarted.png)
+![service-restarted](service-restarted.png) \
 Nyt Changed: 2 ja kommentissa lukee "Service restarted".  Seuraavaksi lisätään Portti 1234 masterin /srv/salt/sshd_config tiedostoon ja ajetaan komento uudestaan.
 ```
 sudo salt '*' state.apply ssh-testi
