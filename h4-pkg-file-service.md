@@ -22,7 +22,7 @@ nc -vz localhost 1234
 ```
 ![vagrant-1234](vagrant-1234.png)
 
-Vastaukseksi tuli "Connection refused" kuten kuvasta näkyy. \
+Vastaukseksi tuli "Connection refused" kuten kuvasta näkyy. 
 
 Tämän jälkeen menin editoimaan sshd_config tiedostoa komennolla
 ```
