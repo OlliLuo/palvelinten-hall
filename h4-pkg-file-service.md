@@ -117,3 +117,10 @@ Tämän jälkeen testattiin minionilla onko portti 1234 auki
 nc -vz localhost 1234
 ```
 ![localhost-open](localhost-open.png)
+
+### Lähteet
+
+Karvinen 2018: Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh \
+Tavio 2025: H4 Pkg-file-service H4 Pkg-file-service https://aapotavio.com/configuration-management-systems/h4-pkg-file-service/
+
+
