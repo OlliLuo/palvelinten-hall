@@ -17,7 +17,7 @@ Tein uuden varaston Githubiin nimellä Snow-White. Tein tästä julkisen ja luom
 
 
 **b) Dolly. Kloonaa edellisessä kohdassa tehty uusi varasto itsellesi, tee muutoksia omalla koneella, puske ne palvelimelle, ja näytä, että ne ilmestyvät weppiliittymään.** \
-Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. Seuraavaksi hain Snow-White kirjastosta SSH kloonauslinkin: git@github.com:OlliLuo/Snow-White.git \
+Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. Seuraavaksi hain Snow-White kirjastosta SSH kloonauslinkin: git@github.com:OlliLuo/Snow-White.git 
 
 ![ssh-key](ssh-key.png)
 
