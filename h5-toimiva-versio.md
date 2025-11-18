@@ -39,7 +39,7 @@ git commit
 git pull
 git push
 ```
-![muutos-readme](muutos-readme.png)
+![git-komennot](git-komennot.png)
 Tämän jälkeen menin katsomaan githubiin oliko muutos tullut sivulle. Onnistui!
 
 ![git-toimii](git-toimii.png)
