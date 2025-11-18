@@ -27,7 +27,7 @@ Ajoin virtuaalikoneessani komennon
 git clone git@github.com:OlliLuo/Snow-White.git
 ```
 
-![git-clone](git-clone.png)
+![git-komennot](git-komennot.png)
 
 Seuraavaksi tein virtuaalikoneellani muutoksen README tiedostoon. Lisäsin sinne tekstin "Tämä on testi. Toimiiko?"
 ![muutos-readme](muutos-readme.png)
