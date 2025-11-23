@@ -6,7 +6,7 @@
 - Git on versionhallintahärjestelmä. Se on työkalu, joka seuraa tiedostomuutoksia.
 - Koska toiminnot tehdään paikallisesti, GIt on erittäin nopea.
 - Git-tiedostot voivat olla kolmesssa päätilassa: Committed, modified, staged.
-- 
+
 **Gitin käyttö on lähinnä 'git add . && git commit; git pull && git push'. Selitä tuon komennon jokainen osa. Käytä apuna itse valitsemiasi lähteitä ja viittaa niihin.**
 - git add: git add ottaa muokatut tiedostot ja sijoittaa ne väliaikaiseen alueeseen, joka tunnetaan myös yksinkertaisesti nimellä ”indeksi”.
 - git commit: Git commit -komennon suorittaminen muuntaa staging-alueen sisällön muuttumattomaksi tilannekuvaksi, joka tallennetaan Gitin arkistohistoriaan.
@@ -89,6 +89,6 @@ sudo salt-call --local --file-root /home/ollil/snow/Snow-White state.apply init
 
 ### Lähteet
 
-Git pull https://www.atlassian.com/git/tutorials/syncing/git-pull
-Git add, commit, and push https://graphite.com/guides/git-add-commit-push
+Git pull https://www.atlassian.com/git/tutorials/syncing/git-pull \
+Git add, commit, and push https://graphite.com/guides/git-add-commit-push \
 1.3 Getting Started - What is Git? https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
