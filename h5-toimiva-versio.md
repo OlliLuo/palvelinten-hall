@@ -55,7 +55,7 @@ Tämän jälkeen ajoin komennon
 git reset --hard
 ```
 
-![git-reset](git-reset.png)
+![git-reset](git_reset.png)
 Teksti tuli takaisin näkyviin!
 
 
@@ -64,19 +64,19 @@ Ajoin komennon
 ```
 git log --patch
 ```
-![git-log](git-log.png)
+![git-log](git_log.png)
 Nimi ja sähköpostiosoite näkyy oikein. Komento näyttää commit-historian sekä jokaisen commitin sisältämät muutokset (diffit). Myös tekijä- ja aikatiedot näkyvät. Author: kuka on tehnyt muutoksen (nimi + sähköposti) sekä Date: milloin commit on luotu.
 
 
 **e) Suolattu rakki. Aja Salt-tiloja omasta varastostasi. (Salt tiedostot mistä vain hakemistosta "--file-root teronSaltHakemisto". Esimerkiksi 'sudo salt-call --local --file-root srv/salt/ state.apply', huomaa suhteellinen polku.)**
 Loin init.sls tiedoston
 
-![init-sls](init-sls.png)
+![init-sls](init_sls.png)
 
 Ajoin tämän tiedoston komennolla
 ```
 sudo salt-call --local --file-root /home/ollil/snow/Snow-White state.apply init
 ```
-![file-managed](file-manaegd.png)
+![file-managed](file_managed.png)
 
 
