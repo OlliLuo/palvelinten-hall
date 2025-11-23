@@ -17,9 +17,10 @@ Tein uuden varaston Githubiin nimellä Snow-White. Tein tästä julkisen ja luom
 
 
 **b) Dolly. Kloonaa edellisessä kohdassa tehty uusi varasto itsellesi, tee muutoksia omalla koneella, puske ne palvelimelle, ja näytä, että ne ilmestyvät weppiliittymään.** \
-Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. Seuraavaksi hain Snow-White kirjastosta SSH kloonauslinkin: git@github.com:OlliLuo/Snow-White.git 
-
+Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. 
 ![ssh-key](ssh-key.png)
+
+Seuraavaksi hain Snow-White kirjastosta SSH kloonauslinkin: git@github.com:OlliLuo/Snow-White.git 
 
 Ajoin virtuaalikoneessani komennon
 
@@ -27,7 +28,7 @@ Ajoin virtuaalikoneessani komennon
 git clone git@github.com:OlliLuo/Snow-White.git
 ```
 
-![git-komennot](git-komennot.png)
+![git-clone](git-clone.png)
 
 Seuraavaksi tein virtuaalikoneellani muutoksen README tiedostoon. Lisäsin sinne tekstin "Tämä on testi. Toimiiko?"
 ![muutos-readme](muutos-readme.png)
