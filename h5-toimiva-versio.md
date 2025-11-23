@@ -3,12 +3,19 @@
 **x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva. Kannattaa lisätä mukaan myös jokin oma havainto, idea tai kysymys.)**
 
 **Chacon and Straub 2014: Pro Git, 2ed: 1.3 Getting Started - What is Git?**
-
+- Git on versionhallintahärjestelmä. Se on työkalu, joka seuraa tiedostomuutoksia.
+- Koska toiminnot tehdään paikallisesti, GIt on erittäin nopea.
+- Git-tiedostot voivat olla kolmesssa päätilassa: Committed, modified, staged.
+- 
 **Gitin käyttö on lähinnä 'git add . && git commit; git pull && git push'. Selitä tuon komennon jokainen osa. Käytä apuna itse valitsemiasi lähteitä ja viittaa niihin.**
+- git add: git add ottaa muokatut tiedostot ja sijoittaa ne väliaikaiseen alueeseen, joka tunnetaan myös yksinkertaisesti nimellä ”indeksi”.
+- git commit: Git commit -komennon suorittaminen muuntaa staging-alueen sisällön muuttumattomaksi tilannekuvaksi, joka tallennetaan Gitin arkistohistoriaan.
+- Git pull -komentoa käytetään hakemaan ja lataamaan sisältöä etävarastosta ja päivittämään paikallinen varasto välittömästi vastaamaan kyseistä sisältöä.
+- git push: git push lähettää paikalliset kommitit etävarastoon (esim. github).
+  
 
 **Varaston terokarvinen/suolax/ historia, eli loki ja muutokset. Kätevimmin komentokehotteesta 'git clone https://github.com/terokarvinen/suolax.git; cd suolax/; git log --patch --color|less -R'. Wepistäkin saattaa onnistua kliksuttelemalla "Commits".**
-
-
+Osoitteesta https://github.com/terokarvinen/suolax/commits/main/ löytyy commit historia. Historiassa on mm. "Clean up README.md", "Add hello world module to create a temporary file" ja "Add more favourite programs, and list installed modules in top file". 
 
 **a) Online. Tee uusi varasto GitHubiin (tai Gitlabiin tai mihin vain vastaavaan palveluun). Varaston nimessä ja lyhyessä kuvauksessa tulee olla sana "snow". Aiemmin tehty varasto ei kelpaa. (Muista tehdä varastoon tiedostoja luomisvaiheessa, esim README.md ja GNU General Public License 3)** \
 Tein uuden varaston Githubiin nimellä Snow-White. Tein tästä julkisen ja luomisvaiheessa lisäsin README tiedoston sekä GNU General Public License 3. 
@@ -17,7 +24,7 @@ Tein uuden varaston Githubiin nimellä Snow-White. Tein tästä julkisen ja luom
 
 
 **b) Dolly. Kloonaa edellisessä kohdassa tehty uusi varasto itsellesi, tee muutoksia omalla koneella, puske ne palvelimelle, ja näytä, että ne ilmestyvät weppiliittymään.** \
-Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. 
+Aloitin tämän luomalla uuden virtuaaliokoneelleni uuden kansion "Snow". Tänne kloonaan varaston. Olin jo tunnilla luonut julkisen avaimen ja liittänyt tämän githubiin. \
 ![ssh-key](ssh-key.png)
 
 Seuraavaksi hain Snow-White kirjastosta SSH kloonauslinkin: git@github.com:OlliLuo/Snow-White.git 
@@ -40,7 +47,7 @@ git commit
 git pull
 git push
 ```
-![git-komennot](git-komennot.png)
+![git-komennot](git-komennot.png) \
 Tämän jälkeen menin katsomaan githubiin oliko muutos tullut sivulle. Onnistui!
 
 ![git-toimii](git-toimii.png)
@@ -49,13 +56,13 @@ Tämän jälkeen menin katsomaan githubiin oliko muutos tullut sivulle. Onnistui
 
 **c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.**
 Poistin README tiedostosta tekstin "Tämä on testi. Toimiiko?"
-![readme-muutos](readme-muutos.png)
+![readme-muutos](readme-muutos.png) \
 Tämän jälkeen ajoin komennon
 ```
 git reset --hard
 ```
 
-![git_reset](git_reset.png)
+![git_reset](git_reset.png) \
 Teksti tuli takaisin näkyviin!
 
 
@@ -80,3 +87,8 @@ sudo salt-call --local --file-root /home/ollil/snow/Snow-White state.apply init
 ![file_managed](file_managed.png)
 
 
+### Lähteet
+
+Git pull https://www.atlassian.com/git/tutorials/syncing/git-pull
+Git add, commit, and push https://graphite.com/guides/git-add-commit-push
+1.3 Getting Started - What is Git? https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
