@@ -14,7 +14,7 @@
 - git push: git push lähettää paikalliset kommitit etävarastoon (esim. github).
   
 
-**Varaston terokarvinen/suolax/ historia, eli loki ja muutokset. Kätevimmin komentokehotteesta 'git clone https://github.com/terokarvinen/suolax.git; cd suolax/; git log --patch --color|less -R'. Wepistäkin saattaa onnistua kliksuttelemalla "Commits".**
+**Varaston terokarvinen/suolax/ historia, eli loki ja muutokset. Kätevimmin komentokehotteesta 'git clone https://github.com/terokarvinen/suolax.git; cd suolax/; git log --patch --color|less -R'. Wepistäkin saattaa onnistua kliksuttelemalla "Commits".** \
 Osoitteesta https://github.com/terokarvinen/suolax/commits/main/ löytyy commit historia. Historiassa on mm. "Clean up README.md", "Add hello world module to create a temporary file" ja "Add more favourite programs, and list installed modules in top file". 
 
 **a) Online. Tee uusi varasto GitHubiin (tai Gitlabiin tai mihin vain vastaavaan palveluun). Varaston nimessä ja lyhyessä kuvauksessa tulee olla sana "snow". Aiemmin tehty varasto ei kelpaa. (Muista tehdä varastoon tiedostoja luomisvaiheessa, esim README.md ja GNU General Public License 3)** \
