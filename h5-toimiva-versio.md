@@ -48,11 +48,35 @@ Tämän jälkeen menin katsomaan githubiin oliko muutos tullut sivulle. Onnistui
 
 
 **c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia.**
+Poistin README tiedostosta tekstin "Tämä on testi. Toimiiko?"
+![readme-muutos](readme-muutos.png)
+Tämän jälkeen ajoin komennon
+```
+git reset --hard
+```
+
+![git-reset](git-reset.png)
+Teksti tuli takaisin näkyviin!
 
 
 **d) Tukki. Tarkastele ja selitä varastosi lokia. Tarkista, että nimesi ja sähköpostiosoitteesi näkyy haluamallasi tavalla ja korjaa tarvittaessa.**
+Ajoin komennon 
+```
+git log --patch
+```
+![git-log](git-log.png)
+Nimi ja sähköpostiosoite näkyy oikein. Komento näyttää commit-historian sekä jokaisen commitin sisältämät muutokset (diffit). Myös tekijä- ja aikatiedot näkyvät. Author: kuka on tehnyt muutoksen (nimi + sähköposti) sekä Date: milloin commit on luotu.
 
 
 **e) Suolattu rakki. Aja Salt-tiloja omasta varastostasi. (Salt tiedostot mistä vain hakemistosta "--file-root teronSaltHakemisto". Esimerkiksi 'sudo salt-call --local --file-root srv/salt/ state.apply', huomaa suhteellinen polku.)**
+Loin init.sls tiedoston
+
+![init-sls](init-sls.png)
+
+Ajoin tämän tiedoston komennolla
+```
+sudo salt-call --local --file-root /home/ollil/snow/Snow-White state.apply init
+```
+![file-managed](file-manaegd.png)
 
 
